@@ -25,7 +25,7 @@ namespace core.Specification
                         AddOrderBy(p => p.Price);
                         break;
 
-                    case "priceDsc":
+                    case "priceDesc":
                         AddOrderByDescending(p => p.Price);
                         break;
 
