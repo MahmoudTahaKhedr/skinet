@@ -11,6 +11,8 @@ const routes: Routes = [
   {path: 'server-error', component: ServerErrorComponent,data: {bradcrumb:'Server Error'}},
   {path: 'not-found', component: NotFoundComponent,data: {bradcrumb:'Not Found'}},
   {path: 'shop', loadChildren: () => import('./shop/shop.module').then(mod => mod.ShopModule),data: {bradcrumb:'Shop'}},
+  {path: 'basket', loadChildren: () => import('./basket/basket.module').then(mod => mod.BasketModule),data: {bradcrumb:'Basket'}},
+  {path: 'checkout', loadChildren: () => import('./checkout/checkout.module').then(mod => mod.CheckoutModule),data: {bradcrumb:'Checkout'}},
   {path:'**', redirectTo:'not-found', pathMatch:'full'}
 ];
 
