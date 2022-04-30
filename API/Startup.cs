@@ -40,6 +40,8 @@ namespace API
             });
             services.AddApplicationService();
             services.AddIdentityServices(_configuration);
+            // For adding Rols later
+            // services.AddIdentityCore<AppUser>().AddRoles<IdentityRole>().AddEntityFrameworkStores<AppIdentityDbContext>();
             services.AddSwaggerDocumentation();
             services.AddCors(opt =>
             {

@@ -27,10 +27,9 @@ basketTotal$ = this.basketTotalSource.asObservable();
   }
 
   setBasket(basket: IBasket){
-    return this.http.post(this.basUrl + 'basket', basket).subscribe((response: IBasket)=> {
-     this.calculateTotals();
-    }, error => {
-      console.log(error);
+    return this.http.post(this.basUrl + 'basket', basket).subscribe({
+    next:(response: IBasket) => this.calculateTotals(),
+    error: (error) => console.log(error)
     });
   }
 
