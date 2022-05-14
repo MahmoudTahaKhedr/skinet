@@ -13,7 +13,12 @@ const routes: Routes = [
   {path: 'not-found', component: NotFoundComponent,data: {bradcrumb:'Not Found'}},
   {path: 'shop', loadChildren: () => import('./shop/shop.module').then(mod => mod.ShopModule),data: {bradcrumb:'Shop'}},
   {path: 'basket', loadChildren: () => import('./basket/basket.module').then(mod => mod.BasketModule),data: {bradcrumb:'Basket'}},
-  {path: 'checkout',canActivate: [AuthGuard], loadChildren: () => import('./checkout/checkout.module').then(mod => mod.CheckoutModule),data: {bradcrumb:'Checkout'}},
+  {
+    path: 'checkout', 
+    canActivate: [AuthGuard],
+    loadChildren: () => import('./checkout/checkout.module').then(mod => mod.CheckoutModule),
+    data: { breadcrumb: 'Checkout' }
+  },  
   {path: 'account', loadChildren: () => import('./account/account.module').then(mod => mod.AccountModule),data: {bradcrumb:{skip: true}}},
   {path:'**', redirectTo:'not-found', pathMatch:'full'}
 ];

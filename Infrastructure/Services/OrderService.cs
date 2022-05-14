@@ -21,10 +21,9 @@ namespace Infrastructure.Services
            
         }
 
-        public async Task<IReadOnlyList<DeliveryMethod>> GetDeliveryMethodAsync()
+        public async Task<IReadOnlyList<DeliveryMethod>> GetDeliveryMethodsAsync()
         {
-             return await _unitOfWork.Repository<DeliveryMethod>().ListAllAsync();
-
+            return await _unitOfWork.Repository<DeliveryMethod>().ListAllAsync();
         }
 
         public async Task<Order> CreateOrderAsync(string buyerEmail, int deliveryMethodId, string basketId, Address shippingAddres)
