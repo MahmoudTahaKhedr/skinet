@@ -11,10 +11,10 @@ export class OrdersService {
   constructor(private http: HttpClient) { }
 
   getOrdersForUser() {
-    return this.http.get(this.baseUrl + 'orders');
+    return this.http.get(this.baseUrl + 'order');
   }
 
   getOrderDetailed(id: number) {
-    return this.http.get(this.baseUrl + 'orders/' + id);
+    return this.http.get(this.baseUrl + 'order/' + id);
   }
 }

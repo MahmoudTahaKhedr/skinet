@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
-using core.Entities.Identity;
+using core.Entities.OrderAggregate;
 
 namespace API.Dtos
 {
     public class OrderToReturnDto
     {
-        public int Id { get; set; }
+       public int Id { get; set; }
         public string BuyerEmail { get; set; }
         public DateTimeOffset OrderDate { get; set; }
         public Address ShipToAddress { get; set; }
@@ -16,5 +16,5 @@ namespace API.Dtos
         public decimal Subtotal { get; set; }
         public string Status { get; set; }
         public decimal Total { get; set; }
-    }
+}
 }
