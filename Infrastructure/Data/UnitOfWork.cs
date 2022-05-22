@@ -10,7 +10,6 @@ namespace Infrastructure.Data
     {
         private readonly StoreContext _context;
         private Hashtable _repositories;
-        private IDictionary repositories;
         public UnitOfWork(StoreContext context)
         {
             _context = context;
